@@ -438,11 +438,17 @@ Copy `web/.env.example` to `web/.env.local` (and set the same variables in Verce
 cd web && pnpm install && pnpm dev
 ```
 
-Deploy to Vercel **from the repo root** (the Vercel project's Root Directory is `web`):
+Deploy to Vercel either way:
 
 ```sh
+# Simplest: link and deploy from inside web/ (no Root Directory setting needed)
+cd web && vercel link && vercel deploy --prod
+
+# Or: set the Vercel project's Root Directory to `web` and deploy from the repo root
 vercel deploy --prod
 ```
+
+`NEXT_PUBLIC_*` variables must be added with `--visibility config --no-sensitive` on Production and Preview; the tokens can stay sensitive. After the first deploy, set `PREVIEW_BASE_URL` (Blueprint) and `SANITY_STUDIO_PREVIEW_URL` (Studio) to the production URL, add it as a CORS origin with credentials, and redeploy both.
 
 ### 3. Blueprint, Functions, and the Knowledge Base
 
@@ -541,5 +547,5 @@ Other guardrails:
 - **One endpoint, one retrieval mode.** Adding a dataset source to a Knowledge Base endpoint silently switches it to GROQ mode and ignores the Knowledge Base.
 - **Run `sanity context …` outside `studio/`.** A directory with a `sanity.cli.ts` breaks those commands; `blueprint/` has none on purpose.
 - **Never name a Blueprint env var `SANITY_PROJECT_ID`.** The Blueprints CLI reads it as a scope override.
-- **Vercel:** set the project's Root Directory to `web` and deploy from the repo root. Team-scoped `*.vercel.app` aliases can sit behind Vercel Authentication; point `PREVIEW_BASE_URL` at the public production domain.
+- **Vercel:** deploy from `web/`, or set the Root Directory to `web` and deploy from the repo root; mixing the two fails with "Root Directory does not exist". Team-scoped `*.vercel.app` aliases can sit behind Vercel Authentication; point `PREVIEW_BASE_URL` at the public production domain.
 - **Beta surface.** Knowledge Bases, Context Blueprint resources, and Agent Actions (image generation) are beta or experimental. Pin versions and re-check the Sanity docs before upgrading.
