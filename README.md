@@ -409,7 +409,7 @@ pnpm typegen        # writes studio/schema.json and web/sanity.types.d.ts
 pnpm run deploy     # deploys the Studio and both schemas
 ```
 
-After the first deploy, put the printed app id in `SANITY_STUDIO_APP_ID` so later deploys update the same Studio.
+Set `SANITY_STUDIO_HOST` to the `*.sanity.studio` hostname you want before the first deploy. Afterwards, put the printed app id in `SANITY_STUDIO_APP_ID` so later deploys update the same Studio.
 
 Always deploy schema changes with `pnpm run deploy`. Sanity keeps two schemas: the Studio's own, read by the Sanity MCP connector (and therefore by Claude), and `_.schemas.default`, used by Agent Actions for image generation. A Studio deploy updates both; `sanity schema deploy` updates only the second.
 
@@ -536,6 +536,7 @@ Other guardrails:
 - **A Knowledge Base has two ids.** `id` is a UUID used by the CLI and management API; `publicId` (`kb…`) is what entry documents carry in `knowledgeBaseId` and what the MCP search tools expect.
 - **A refresh doesn't rewrite entries for an edited Rule.** It re-ingests the Rules but files no issue for the change, so `sync-rules` also rebuilds the entries that cite the Rule.
 - **A full build can reorganize the outline** (entry paths change). Nothing here hard-codes entry paths.
+- **Scheduled Knowledge Base refresh is plan-gated.** On plans without it, `connect-rules` warns and moves on; `sync-rules` still refreshes on every Rule publish.
 - **`delta::changedAny` is false on create.** The Build trigger also accepts `delta::operation() == "create"`, because the form, Claude, and Slack create Briefs with `buildRequestedAt` already set.
 - **One endpoint, one retrieval mode.** Adding a dataset source to a Knowledge Base endpoint silently switches it to GROQ mode and ignores the Knowledge Base.
 - **Run `sanity context …` outside `studio/`.** A directory with a `sanity.cli.ts` breaks those commands; `blueprint/` has none on purpose.

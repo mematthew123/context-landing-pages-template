@@ -32,5 +32,10 @@ if (hasRules) {
 }
 
 console.log(sanity('build', kb.id, '--watch'))
-console.log(sanity('update', kb.id, '--refresh-enabled', '--refresh-frequency', 'weekly'))
+// Optional: sync-rules refreshes on every Rule publish. Some plans don't allow scheduled refresh.
+try {
+  console.log(sanity('update', kb.id, '--refresh-enabled', '--refresh-frequency', 'weekly'))
+} catch {
+  console.warn('Scheduled refresh is not available on this plan; sync-rules still refreshes on publish.')
+}
 console.log(`\nSet KNOWLEDGE_BASE_ID=${kb.id} on the sync-rules function to skip the lookup.`)

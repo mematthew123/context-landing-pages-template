@@ -6,6 +6,8 @@ export default defineCliConfig({
     projectId: process.env.SANITY_STUDIO_PROJECT_ID,
     dataset: process.env.SANITY_STUDIO_DATASET || 'production',
   },
+  // The *.sanity.studio hostname for the first `sanity deploy`
+  studioHost: process.env.SANITY_STUDIO_HOST,
   deployment: {
     // Set after the first `sanity deploy`, so later deploys update the same Studio
     appId: process.env.SANITY_STUDIO_APP_ID,
