@@ -1,0 +1,436 @@
+[
+ {
+  "_id": "rule.facts-from-brief",
+  "statement": "Every claim, number, and quote on the page comes from the Brief.",
+  "category": "composition",
+  "rationale": "A landing page is a public statement; facts nobody approved can't appear on it.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Brief fidelity",
+   "url": ""
+  }
+ },
+ {
+  "_id": "rule.drop-unsupported-content",
+  "statement": "If a Container needs content the Brief lacks, leave the Container out and report it.",
+  "category": "composition",
+  "rationale": "An empty or padded section reads worse than a shorter page.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Brief fidelity",
+   "url": ""
+  }
+ },
+ {
+  "_id": "rule.report-dropped",
+  "statement": "Report everything from the Brief that wasn't placed, with a one-line reason.",
+  "category": "composition",
+  "rationale": "Reviewers need to see what the Build left out, not discover it.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Brief fidelity",
+   "url": ""
+  }
+ },
+ {
+  "_id": "rule.skip-editor-notes",
+  "statement": "Skip internal notes, goals, and audience descriptions in the Brief; map only copy meant for the page.",
+  "category": "composition",
+  "rationale": "Briefs mix instructions for the writer with copy for the reader.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Brief fidelity",
+   "url": ""
+  }
+ },
+ {
+  "_id": "rule.quotes-verbatim",
+  "statement": "Use quotes verbatim from the Brief with the attribution it gives; never edit, merge, or invent them.",
+  "category": "composition",
+  "rationale": "Quotes are approved word for word.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Brief fidelity",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderQuote"
+  ]
+ },
+ {
+  "_id": "rule.hero-heading-from-title",
+  "statement": "Use the Brief's main headline as the hero heading; if it has none, base it on the key message.",
+  "category": "composition",
+  "rationale": "The hero is the page's promise and should match what the Brief leads with.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Hero",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderHero"
+  ]
+ },
+ {
+  "_id": "rule.hero-eyebrow",
+  "statement": "The hero eyebrow is the product or category name in two to four words, never a sentence.",
+  "category": "composition",
+  "rationale": "The eyebrow orients the reader; the heading does the persuading.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Hero",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderHero"
+  ],
+  "examples": [
+   {
+    "do": "Analytics platform",
+    "dont": "The fastest way to understand your data"
+   }
+  ]
+ },
+ {
+  "_id": "rule.section-to-media-with-section",
+  "statement": "Map each Brief section that has a heading and body copy to a Media With Section.",
+  "category": "composition",
+  "rationale": "One idea per section keeps the page scannable.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Sections",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderMediaWithSection"
+  ]
+ },
+ {
+  "_id": "rule.content-grid-for-items",
+  "statement": "Use a Content Grid for two to six short, parallel items, with a Subheading as each title.",
+  "category": "composition",
+  "rationale": "Parallel items read best side by side.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Sections",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderContentGrid"
+  ]
+ },
+ {
+  "_id": "rule.callout-for-proof",
+  "statement": "Use a Callout for a boxed proof point or aside inside the section it supports.",
+  "category": "composition",
+  "rationale": "Proof sits next to the claim it backs up.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Sections",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderCallout"
+  ]
+ },
+ {
+  "_id": "rule.faq-from-questions",
+  "statement": "Turn the Brief's questions and answers into the FAQ, one question per item.",
+  "category": "composition",
+  "rationale": "The FAQ answers objections the Brief already anticipates.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "FAQ",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderFaq"
+  ]
+ },
+ {
+  "_id": "rule.speed-bump-closing",
+  "statement": "Use one Speed Bump per page, last, for the closing call to action.",
+  "category": "composition",
+  "rationale": "Readers who reach the end need one clear next step.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Sections",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderSpeedBump"
+  ]
+ },
+ {
+  "_id": "rule.no-adjacent-headings",
+  "statement": "Never place two Heading blocks in a row; follow a Heading with Text or supporting copy.",
+  "category": "composition",
+  "rationale": "Two headings in a row break the document outline.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Headings",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderHeading"
+  ]
+ },
+ {
+  "_id": "rule.matched-text-suffix",
+  "statement": "Italic display text must be an exact whole-word suffix of its heading, and shorter than the rest.",
+  "category": "composition",
+  "rationale": "The italic phrase is an accent, not half the heading.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Headings",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderHeading",
+   "pageBuilderSectionHeader",
+   "pageBuilderMediaWithSection"
+  ]
+ },
+ {
+  "_id": "rule.cta-primary-label",
+  "statement": "Label the primary CTA \"Book a demo\" and the secondary \"Start for free\".",
+  "category": "composition",
+  "rationale": "Consistent labels make the conversion path predictable.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "CTAs",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderCta",
+   "pageBuilderHero",
+   "pageBuilderSpeedBump"
+  ]
+ },
+ {
+  "_id": "rule.cta-placement",
+  "statement": "Put CTAs in the hero and in the closing Speed Bump.",
+  "category": "composition",
+  "rationale": "Readers convinced early and readers who finish both need a next step.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "CTAs",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderHero",
+   "pageBuilderSpeedBump"
+  ]
+ },
+ {
+  "_id": "rule.cta-href-verbatim",
+  "statement": "Copy CTA URLs from the Brief verbatim, and never invent campaign or tracking parameters.",
+  "category": "composition",
+  "rationale": "Tracking parameters belong to the campaign owner.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "CTAs",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderCta"
+  ]
+ },
+ {
+  "_id": "rule.image-library-first",
+  "statement": "Fill each media slot with an Image library entry that shows what the section describes, before considering generation.",
+  "category": "composition",
+  "rationale": "Library images are approved and real.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Images",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderMediaWithSection",
+   "pageBuilderImage"
+  ]
+ },
+ {
+  "_id": "rule.never-generate-product-ui",
+  "statement": "Never generate an image of the product's UI; use a library screenshot or leave a Placeholder.",
+  "category": "composition",
+  "rationale": "A generated screenshot is a fabricated product claim.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Images",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderMediaWithSection",
+   "pageBuilderImage"
+  ]
+ },
+ {
+  "_id": "rule.generate-illustrations-only",
+  "statement": "Generate an image only for an illustrative slot with no library match: abstract, no text, no logos.",
+  "category": "composition",
+  "rationale": "Abstract illustrations add rhythm without implying anything about the product.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Images",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderMediaWithSection",
+   "pageBuilderImage"
+  ]
+ },
+ {
+  "_id": "rule.media-placeholder",
+  "statement": "Leave a media slot empty as a Placeholder only when no library image fits and generation isn't allowed; report it.",
+  "category": "composition",
+  "rationale": "A person fills it before publishing.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Images",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderMediaWithSection",
+   "pageBuilderImage"
+  ]
+ },
+ {
+  "_id": "rule.sentence-case",
+  "statement": "Use sentence case in titles, headings, and CTAs; capitalize only proper nouns.",
+  "category": "copy",
+  "rationale": "Sentence case reads faster and stays consistent.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Copy mechanics",
+   "url": ""
+  }
+ },
+ {
+  "_id": "rule.no-periods-in-headings",
+  "statement": "Don't end titles or headings with a period.",
+  "category": "copy",
+  "rationale": "Headings are labels, not sentences.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Copy mechanics",
+   "url": ""
+  }
+ },
+ {
+  "_id": "rule.active-voice",
+  "statement": "Use active voice.",
+  "category": "copy",
+  "rationale": "Active voice says who does what.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Copy mechanics",
+   "url": ""
+  }
+ },
+ {
+  "_id": "rule.oxford-comma",
+  "statement": "Use the Oxford comma.",
+  "category": "copy",
+  "rationale": "It removes ambiguity in lists.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Copy mechanics",
+   "url": ""
+  }
+ },
+ {
+  "_id": "rule.never-link-here",
+  "statement": "Never hyperlink the word \"here\"; link specific, descriptive words.",
+  "category": "copy",
+  "rationale": "Descriptive links help scanning and accessibility.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Copy mechanics",
+   "url": ""
+  }
+ },
+ {
+  "_id": "rule.image-alt-text",
+  "statement": "Write alt text that says what the image shows, not what the section claims.",
+  "category": "copy",
+  "rationale": "Alt text is for people who can't see the image.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Images",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderMediaWithSection",
+   "pageBuilderImage"
+  ]
+ },
+ {
+  "_id": "rule.proofread",
+  "statement": "Proofread every line: no spelling, grammar, or punctuation errors.",
+  "category": "copy",
+  "rationale": "Errors undercut every claim on the page.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Copy mechanics",
+   "url": ""
+  }
+ },
+ {
+  "_id": "rule.never-name-competitors",
+  "statement": "Never name competitors; describe the category instead.",
+  "category": "terminology",
+  "rationale": "Comparisons belong on pages built for them, with legal review.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Positioning",
+   "url": ""
+  },
+  "examples": [
+   {
+    "do": "replaced a legacy BI tool",
+    "dont": "replaced Competitor X"
+   }
+  ]
+ },
+ {
+  "_id": "rule.voice-plain",
+  "statement": "Write plainly and specifically; prefer a concrete example to an adjective.",
+  "category": "voice",
+  "rationale": "Specific copy is more credible than enthusiastic copy.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "Voice",
+   "url": ""
+  }
+ },
+ {
+  "_id": "rule.meta-title-from-h1",
+  "statement": "When the Brief gives no meta title, base it on the hero heading.",
+  "category": "seo",
+  "rationale": "The meta title should match what the page promises.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "SEO",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderPage"
+  ]
+ },
+ {
+  "_id": "rule.slug-brevity",
+  "statement": "Keep slugs to three to six words, lead with the topic, and leave out dates and filler.",
+  "category": "seo",
+  "rationale": "Short, topical slugs read well and age well.",
+  "source": {
+   "guide": "Starter rules (template)",
+   "section": "SEO",
+   "url": ""
+  },
+  "appliesTo": [
+   "pageBuilderPage"
+  ]
+ }
+]

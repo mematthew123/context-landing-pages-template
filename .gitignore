@@ -1,0 +1,8 @@
+# Per-app ignores live in web/.gitignore and studio/.gitignore
+node_modules
+.DS_Store
+.env*.local
+.claude/settings.local.json
+.vercel
+.env*
+!.env.example
